@@ -45,8 +45,12 @@ return x;
             <div class="card-footer text-muted">
                 <div class="row">
                     <div class="col">
+                        <button id="btnp" type="button" class="btn btn-primary" onclick="plus();"><i class="fas fa-plus"></i></button>
+                        <button id="btnp" type="button" class="btn btn-primary" onclick="minus();"><i class="fas fa-minus"></i></button>
+                    </div>
+                    <div class="col">
                         <div class="btn-group control-buttons" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary" onclick="">Validar</button>
+                            <button type="button" class="btn btn-primary" onclick="console.log(editor.getValue());console.log(editor.selection.getCursor());">Validar</button>
                             <button id="btnp" type="button" disabled="true" class="btn btn-primary"
                                 onclick="">Ejecutar</button>
                         </div>
@@ -106,10 +110,6 @@ return x;
     <script src="js/all.min.js"></script>
 
     <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-        //editor.setTheme("ace/theme/monokai");
-        editor.session.setMode("ace/mode/javascript");
-    </script>
+    <script src="js/editcodeinit.js"></script>
 </body>
 </html>
